@@ -35,3 +35,7 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+wwwroot/app.*.css
+wwwroot/app.*.css.map
+wwwroot/dist/*
+wwwroot/assets/*

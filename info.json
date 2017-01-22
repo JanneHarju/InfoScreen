@@ -1,0 +1,13 @@
+{
+    "label_left_up": "LIIKEREITÄ TÄLLÄ HETKELLÄ",
+    "value_left_up": 35,
+    "label_right_up": "REKRYTOINTEJA VUODEN ALUSTA",
+    "value_right_up": 8,
+    "label_left_down": "AVOIMIA PAIKKOJA",
+    "value_left_down": "Paikka\r\nPaikka2\r\nTULOSSA:\r\nPaikka3\r\nPaikka4",
+    "label_right_down": "TYÖJONOSSA",
+    "label_right_down_1": "Puh. haastattelu",
+    "label_right_down_2": "Live-haastattelu",
+    "value_right_down_1": 15,
+    "value_right_down_2": 7
+}

@@ -1,0 +1,94 @@
+<div id="admin-container">
+    <div class="lw-bar">
+        ADMIN
+        <img src="assets/leanware.png" height="100%" align="right">
+    </div>
+    <div class="col-xs-12 admin-content">
+        <form>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko vasen yläruutu:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        {{input type="text" class="form-control" value=info.label_left_up}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Numero:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        {{input type="number" min="0" class="form-control" value=info.value_left_up placeholder="0"}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko oikea yläruutu:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        {{input type="text" class="form-control" value=info.label_right_up}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Numero:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        {{input type="number" min="0" class="form-control" value=info.value_right_up placeholder="0"}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko vasen alaruutu:</label>
+                    <div class="col-xs-10 col-sm-6 col-md-4">
+                        {{input type="text" class="form-control" value=info.label_left_down}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        {{textarea class="form-control" rows="6" value=info.value_left_down}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko oikea alaruutu:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        {{input type="text" class="form-control" value=info.label_right_down}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Alaotsikko 1 oikea alaruutu:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        {{input type="text" class="form-control" value=info.label_right_down_1}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Alaotsikko 1 arvo:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        {{input type="number" min="0" class="form-control" value=info.value_right_down_1 placeholder="0"}}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Alaotsikko 2 oikea alaruutu:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        {{input type="text" class="form-control" value=info.label_right_down_2}}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Alaotsikko 2 arvo:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        {{input type="number" min="0" class="form-control" value=info.value_right_down_2 placeholder="0"}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-xs-12">
+                    <button (click)="save()" class="btn btn-warning">Tallenna</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</div>
