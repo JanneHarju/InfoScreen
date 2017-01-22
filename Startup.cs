@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using ISKTRInfoNaytto.Controllers;
+using InfoScreen.Controllers;
 
 namespace Angular2WebpackVisualStudio
 {
