@@ -5,7 +5,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+//var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./webpack.helpers');
 var helpers2 = require('./helpers');
 
@@ -61,26 +61,39 @@ module.exports = {
                 test: /favicon.ico$/,
                 loader: 'file-loader?name=/[name].[ext]'
             },
-            {
+            /*{
                 test: /\.css$/,
                 exclude: helpers2.root('src', 'app'),
                 loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' })
+            },*/
+            { 
+                test: /\.css$/, 
+                loaders: ['to-string-loader', 'css-loader']
             },
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                loaders: ['raw-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.html$/,
                 loader: 'raw-loader'
-            }
+            },
+            /*{
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loaders: ['raw-loader', 'sass-loader']
+            },
+            {
+                test: /\.html$/,
+                loader: 'raw-loader'
+            }*/
         ],
         exprContextCritical: false
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({ name: ['app', 'vendor', 'polyfills']}),
-        new ExtractTextPlugin('[name].css'),
+        //new ExtractTextPlugin('[name].css'),
         new CleanWebpackPlugin(
             [
                 './wwwroot/dist',

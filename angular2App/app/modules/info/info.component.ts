@@ -4,7 +4,6 @@ import { Info } from '../../models/info';
 import { InfoService } from '../../services/info.service';
 
 @Component({
-    moduleId: module.id,
     selector: 'my-info',
     templateUrl: 'info.component.html',
     //styleUrls: ['info.component.less']

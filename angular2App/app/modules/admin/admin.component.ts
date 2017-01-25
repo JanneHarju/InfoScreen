@@ -5,7 +5,6 @@ import { InfoService } from '../../services/info.service';
 
 
 @Component({
-  moduleId: module.id,
   selector: 'my-admin',
   templateUrl: 'admin.component.html',
   //styleUrls: [ 'admin.component.less' ],
