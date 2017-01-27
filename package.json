@@ -52,6 +52,8 @@
     "node-sass": "^4.3.0",
     "extract-text-webpack-plugin": "~2.0.0-beta.4",
     "to-string-loader": "1.1.5",
+    "less":"2.7.2",
+    "less-loader": "2.2.3",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.1.1",

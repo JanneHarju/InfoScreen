@@ -32,7 +32,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
+        extensions: ['.ts', '.js', '.json','less', '.css', '.scss', '.html']
     },
 
     devServer: {
@@ -62,10 +62,13 @@ module.exports = {
                 loader: 'file-loader?name=/[name].[ext]'
             },
             /*{
-                test: /\.css$/,
-                exclude: helpers2.root('src', 'app'),
-                loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' })
+                test: /\.less$/,
+                loader: ExtractTextPlugin.extract([ 'css-loader', 'less-loader' ])
             },*/
+            { 
+                test: /.less$/, 
+                exclude: /node_modules/, 
+                loader: 'raw-loader!less-loader' },
             { 
                 test: /\.css$/, 
                 loaders: ['to-string-loader', 'css-loader']
@@ -93,7 +96,7 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({ name: ['app', 'vendor', 'polyfills']}),
-        //new ExtractTextPlugin('[name].css'),
+        //new ExtractTextPlugin('stylesheets/[name].less'),
         new CleanWebpackPlugin(
             [
                 './wwwroot/dist',

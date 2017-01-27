@@ -7,7 +7,7 @@ import { InfoService } from '../../services/info.service';
 @Component({
   selector: 'my-admin',
   templateUrl: 'admin.component.html',
-  //styleUrls: [ 'admin.component.less' ],
+  styles: [ require('./admin.component.less') ],
 })
 
 export class AdminComponent implements OnInit {

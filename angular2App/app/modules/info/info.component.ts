@@ -6,7 +6,7 @@ import { InfoService } from '../../services/info.service';
 @Component({
     selector: 'my-info',
     templateUrl: 'info.component.html',
-    //styleUrls: ['info.component.less']
+    styles: [ require('./info.component.less') ],
 })
 export class InfoComponent implements OnInit {
 
