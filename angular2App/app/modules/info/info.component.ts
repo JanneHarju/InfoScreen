@@ -10,7 +10,7 @@ import { InfoService } from '../../services/info.service';
 })
 export class InfoComponent implements OnInit {
 
-    info: Info;
+    info = new Info();
     ngOnInit(): void {
         this.getInfo();
     } 

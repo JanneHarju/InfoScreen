@@ -12,7 +12,9 @@ import { InfoService } from '../../services/info.service';
 
 export class AdminComponent implements OnInit {
 
-    info: Info;
+
+    info = new Info();
+    
     constructor(private heroService: InfoService) { }
 
     ngOnInit(): void {

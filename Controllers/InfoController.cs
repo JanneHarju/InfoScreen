@@ -31,8 +31,7 @@ namespace InfoScreen.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]Info value)
         {
-            info.label_left_down = value.label_left_down;
-            SaveToFIle(info);
+            SaveToFIle(value);
         }
 
         private void SaveToFIle(Info info)

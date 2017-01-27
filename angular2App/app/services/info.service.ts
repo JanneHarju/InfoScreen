@@ -7,13 +7,13 @@ import { Info } from '../models/info';
 
 @Injectable()
 export class InfoService {
-    private heroesUrl = 'api/infos';  // URL to web api
+    private infosUrl = 'api/infos';  // URL to web api
 
     private headers = new Headers({'Content-Type': 'application/json'});
     constructor( private http: Http) { }
 
     getInfo(): Promise<Info> {
-        return this.http.get(this.heroesUrl)
+        return this.http.get(this.infosUrl)
                 .toPromise()
                 .then(response => response.json() as Info)
                 .catch(this.handleError);
@@ -31,25 +31,25 @@ export class InfoService {
             .catch(this.handleError);
     }*/
 
-    update(hero: Info): Promise<Info> {
-        const url = `${this.heroesUrl}/${hero.id}`;
+    update(info: Info): Promise<Info> {
+        const url = `${this.infosUrl}/${info.id}`;
         return this.http
-            .put(url, hero, {headers: this.headers})
+            .put(url, info, {headers: this.headers})
             .toPromise()
-            .then(() => hero)
+            .then(() => info)
             .catch(this.handleError);
     }
     create(name: string): Promise<Info> {
-        const tmpHero = new Info();
+        const tmpInfo = new Info();
         //tmpHero.name = name;
         return this.http
-            .post(this.heroesUrl, tmpHero, {headers: this.headers})
+            .post(this.infosUrl, tmpInfo, {headers: this.headers})
             .toPromise()
             .then(res => res.json())
             .catch(this.handleError);
     }
     delete(id: number): Promise<void> {
-        const url = `${this.heroesUrl}/${id}`;
+        const url = `${this.infosUrl}/${id}`;
         return this.http.delete(url, {headers: this.headers})
             .toPromise()
             .then(() => null)
