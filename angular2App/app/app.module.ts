@@ -12,6 +12,7 @@ import { InfoService }         from './services/info.service';
 import { AdminComponent } from './modules/admin/admin.component';
 import { NavMenuComponent } from './modules/shared/navmenu/navmenu.component'
 import { AppComponent }  from './app.component';
+import { SimpleTimer } from 'ng2-simple-timer';
 
 import './rxjs-extensions';
 
@@ -30,6 +31,7 @@ import './rxjs-extensions';
   ],
   providers: [
     InfoService,
+    SimpleTimer,
   ],
   bootstrap: [ AppComponent ]
 })

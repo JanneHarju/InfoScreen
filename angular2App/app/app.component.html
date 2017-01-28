@@ -1,10 +1,13 @@
 ﻿<div class='container-fluid'>
     <div class='row'>
-        <div class='col-sm-0'>
+        <div >
             <nav-menu></nav-menu>
         </div>
-        <div class='col-sm-12 body-content'>
+        <div id='body-content'>
             <router-outlet></router-outlet>
+            <!--<router-outlet [@routerTransition]="void">
+                <my-info></my-info>
+            </router-outlet>-->
         </div>
     </div>
 </div>

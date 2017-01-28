@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Info } from '../../models/info';
 import { InfoService } from '../../services/info.service';
+import {SimpleTimer} from 'ng2-simple-timer';
 
 
 @Component({
@@ -15,9 +16,12 @@ export class AdminComponent implements OnInit {
 
     info = new Info();
     
-    constructor(private heroService: InfoService) { }
+    constructor(
+        private heroService: InfoService,
+        private st: SimpleTimer) { }
 
     ngOnInit(): void {
+        this.st.delTimer('5sec');
         this.heroService.getInfo()
             .then(info => this.info = info);
     }
