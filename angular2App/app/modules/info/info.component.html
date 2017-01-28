@@ -1,60 +1,66 @@
 <div id="container">
     <div class="box-row">
-        <div class="col-xs-12 col-sm-4 box">
-            <div class="upleft">
-                <div class="box-style"> 
-                    <h2>{{info.label_left_up}}</h2>
-                    <div class="box-content">
-                        {{info.value_left_up}}
+        <div class="col-sm-9">
+            <div class="box-row">
+                <div class="col-xs-12 col-sm-6 box">
+                    <div class="upleft">
+                        <div class="box-style"> 
+                            <h2>{{info.label_left_up}}</h2>
+                            <div class="box-content">
+                                {{info.value_left_up}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 box">
+                    <div class="upright">
+                        <div class="box-style">
+                            <h2>{{info.label_right_up}}</h2>
+                            <div class="box-content">
+                                {{info.value_right_up}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-row">
+                <div class="col-xs-12 col-sm-6 box">
+                    <div class="downleft">
+                        <div class="box-style">
+                            <h2>{{info.label_left_down}}</h2>
+                            <p class="header-bottom-padding">
+                                {{info.value_left_down}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 box">
+                    <div class="downright">
+                        <div class="box-style">
+                            <h2>{{info.label_right_down}}</h2>
+                            <table width="100%" height="100%">
+                                <tr>
+                                    <td>{{info.label_right_down_1}}</td>
+                                    <td class="table-number">{{info.value_right_down_1}}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{info.label_right_down_2}}</td>
+                                    <td class="table-number">{{info.value_right_down_2}}</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-4 box">
-            <div class="upright">
-                <div class="box-style">
-                    <h2>{{info.label_right_up}}</h2>
-                    <div class="box-content">
-                        {{info.value_right_up}}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 box" id="glove-image">
+        <div class="col-sm-3" id="glove-image">
             <img src="assets/hanska.jpg" height="100%" align="right">
         </div>
     </div>
     <div class="box-row">
-        <div class="col-xs-12 col-sm-4 box">
-            <div class="downleft">
-                <div class="box-style">
-                    <h2>{{info.label_left_down}}</h2>
-                    <p class="header-bottom-padding">
-                        {{info.value_left_down}}
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 box">
-            <div class="downright">
-                <div class="box-style">
-                    <h2>{{info.label_right_down}}</h2>
-                    <table width="100%" height="100%">
-                        <tr>
-                            <td>{{info.label_right_down_1}}</td>
-                            <td class="table-number">{{info.value_right_down_1}}</td>
-                        </tr>
-                        <tr>
-                            <td>{{info.label_right_down_2}}</td>
-                            <td class="table-number">{{info.value_right_down_2}}</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 box" id="lw-image">
-            Päivitetty 18.1.2017
-            <img src="assets/leanware.png" width="100%" align="right">
+        <div id="lw-image">
+                    Päivitetty 18.1.2017
+                    <img src="assets/leanware.png" width="100%" align="right">
         </div>
     </div>
 </div>
