@@ -12,10 +12,6 @@ html, body {
     height: 100vh;
 }
 
-body {
-    background-color: @background;
-}
-
 h2 {
     width: 100%;
     float: left;
@@ -28,9 +24,10 @@ h2 {
     font-weight: 600;
 }
 
-.ember-view, #container {
-    height: 100%;
+#container {
+    height: 100vh;
     overflow: hidden;
+    background-color: @background;
 }
 
 .box-row {

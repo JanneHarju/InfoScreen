@@ -84,6 +84,14 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Päivitys ajankohta:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="info.update_info" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+            </div>
             <div class="form-group row">
                 <div class="col-xs-12">
                     <button (click)="save()" class="btn btn-warning">Tallenna</button>

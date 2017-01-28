@@ -23,12 +23,13 @@ li.link-active a:focus {
     /* On small screens, convert the nav menu to a vertical sidebar */
     .main-nav {
         height: 100%;
-        width: calc(25% - 20px);
+        width: 10%;
     }
     .navbar {
         border-radius: 0px;
         border-width: 0px;
         height: 100%;
+        text-align: right;
     }
     .navbar-header {
         float: none;
@@ -36,9 +37,11 @@ li.link-active a:focus {
     .navbar-collapse {
         border-top: 1px solid #444;
         padding: 0px;
+        margin-right: 0;
     }
     .navbar ul {
         float: none;
+        text-align: left;
     }
     .navbar li {
         float: none;
@@ -56,4 +59,16 @@ li.link-active a:focus {
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
+#collapse-button 
+{
+    text-align: right;
+    vertical-align: middle;
+    height: 30px;
+    width: 10px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-right: -10px;
 }

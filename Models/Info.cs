@@ -13,5 +13,6 @@ namespace InfoScreen.Models
             public string value_right_down_1 { get; set; }
             public string label_right_down_2 { get; set; }
             public string value_right_down_2 { get; set; }
+            public string update_info { get; set; }
     }
 }

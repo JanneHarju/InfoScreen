@@ -11,4 +11,5 @@ export class Info {
   value_right_down_1: string;
   label_right_down_2: string;
   value_right_down_2: string;
+  update_info: string;
 }
