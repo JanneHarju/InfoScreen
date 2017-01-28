@@ -1,4 +1,4 @@
-<div class='main-nav'>
+<div class='main-nav' [@slideInOut]="menuState">
     <div class='navbar navbar-inverse'>
         <div class='navbar-header'>
             <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
@@ -22,9 +22,7 @@
                     </a>
                 </li>
             </ul>
-            <button type="button" class="btn" id="collapse-button">
-                <
-            </button>
+            <button type="button" class="btn" id="collapse-button" (click)="toggleMenu()">||</button>
         </div>
     </div>
 </div>

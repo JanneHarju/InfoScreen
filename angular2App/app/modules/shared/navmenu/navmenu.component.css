@@ -71,4 +71,6 @@ li.link-active a:focus {
     padding-right: 0;
     padding-top: 0;
     margin-right: -10px;
+    background-color: #333;
+    color: white;
 }
