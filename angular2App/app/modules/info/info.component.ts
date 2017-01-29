@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Info } from '../../models/info';
 import { InfoService } from '../../services/info.service';
@@ -13,7 +13,7 @@ import { SimpleTimer } from 'ng2-simple-timer';
     animations: [routerTransition()],
     host: {'[@routerTransition]': ''}
 })
-export class InfoComponent implements OnInit {
+export class InfoComponent implements OnInit, OnDestroy {
     timerId: string;
     info = new Info();
     notFirstTime: boolean = false;
@@ -24,6 +24,11 @@ export class InfoComponent implements OnInit {
 
         this.getInfo();
     } 
+
+    ngOnDestroy(): void
+    {
+        this.st.delTimer('5sec');
+    }
 
     constructor(
         private infoService: InfoService,

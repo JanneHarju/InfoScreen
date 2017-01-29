@@ -27,7 +27,6 @@ export class AdminComponent implements OnInit {
         private route: ActivatedRoute) { }
 
     ngOnInit(): void {
-        this.st.delTimer('5sec');
         this.getInfo();
     }
     getInfo(): void {
