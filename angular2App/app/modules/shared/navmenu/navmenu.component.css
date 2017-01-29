@@ -9,7 +9,9 @@ li.link-active a:focus {
     background-color: #4189C7;
     color: white;
 }
-
+li a.active {
+  color: #039be5;
+}
 /* Keep the nav menu independent of scrolling and on top of other items */
 .main-nav {
     position: fixed;

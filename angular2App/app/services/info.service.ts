@@ -12,11 +12,18 @@ export class InfoService {
     private headers = new Headers({'Content-Type': 'application/json'});
     constructor( private http: Http) { }
 
-    getInfo(): Promise<Info> {
+    getInfos(): Promise<Info[]> {
         return this.http.get(this.infosUrl)
                 .toPromise()
-                .then(response => response.json() as Info)
+                .then(response => response.json() as Info[])
                 .catch(this.handleError);
+    }
+    getInfo(id: number): Promise<Info> {
+        const url = `${this.infosUrl}/${id}`;
+        return this.http.get(url)
+            .toPromise()
+            .then(response => response.json() as Info)
+            .catch(this.handleError);
     }
     private handleError(error: any): Promise<any> {
         //console.error('An error occurred', error); // for demo purposes only

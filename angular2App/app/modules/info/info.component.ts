@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Info } from '../../models/info';
 import { InfoService } from '../../services/info.service';
 import { routerTransition } from '../shared/router.animations';
@@ -17,33 +17,40 @@ export class InfoComponent implements OnInit {
     timerId: string;
     info = new Info();
     notFirstTime: boolean = false;
-    ngOnInit(): void {
-        this.getInfo();
-            // lazy mode 
-
+    ngOnInit(): void 
+    {
         this.st.newTimer('5sec', 5);
         this.timerId = this.st.subscribe('5sec', e => this.callback());
+
+        this.getInfo();
     } 
 
     constructor(
         private infoService: InfoService,
         private router: Router,
         private st: SimpleTimer,
-        private location: Location) { }
+        private location: Location,
+        private route: ActivatedRoute,) { }
     getInfo(): void {
-        this.infoService.getInfo().then(info => this.info = info);
+        
+        var urlParts = this.router.url.split("/");
+        var parameter = urlParts[urlParts.length-1];
+
+        console.info(+parameter);
+        this.infoService.getInfo(+parameter)
+            .then(info => this.info = info);
     }
     callback() {
         if(this.notFirstTime)
         {
             this.st.delTimer('5sec');
-            if(this.location.isCurrentPathEqualTo("/info"))
+            if(this.location.isCurrentPathEqualTo("/info/1"))
             {
-                this.router.navigate(["/info2"])
+                this.router.navigate(['/info', 0]);
             }
             else
             {
-                this.router.navigate(["/info"])
+                this.router.navigate(['/info', 1]);
             }
         }
         else{

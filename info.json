@@ -1,15 +1,32 @@
-{
-  "id": 0,
-  "label_left_up": "LIIKEREITÄ TÄLLÄ HETKELLÄ",
-  "value_left_up": "89",
-  "label_right_up": "REKRYTOINTEJA VUODEN ALUSTA",
-  "value_right_up": "8",
-  "label_left_down": "AVOIMIA PAIKKOJA",
-  "value_left_down": "Paikka\r\nPaikka2\r\nTULOSSA:\r\nPaikka3\r\nPaikka4",
-  "label_right_down": "TYÖJONOSSA",
-  "label_right_down_1": "Puh. haastattelu",
-  "value_right_down_1": "15",
-  "label_right_down_2": "Live-haastattelu",
-  "value_right_down_2": "7",
-  "update_info": "Päivitetty 28.1.2018"
-}
+[
+  {
+    "id": 0,
+    "label_left_up": "LIIKEREITÄ TÄLLÄ HETKELLÄ",
+    "value_left_up": "89",
+    "label_right_up": "REKRYTOINTEJA VUODEN ALUSTA",
+    "value_right_up": "8",
+    "label_left_down": "AVOIMIA PAIKKOJA",
+    "value_left_down": "Paikka\r\nPaikka2\r\nTULOSSA:\r\nPaikka3\r\nPaikka4",
+    "label_right_down": "TYÖJONOSSA",
+    "label_right_down_1": "Puh. haastattelu",
+    "value_right_down_1": "15",
+    "label_right_down_2": "Live-haastattelu",
+    "value_right_down_2": "7",
+    "update_info": "Päivitetty 28.1.2018"
+  },
+  {
+    "id": 1,
+    "label_left_up": "LIIKEVAIHTO",
+    "value_left_up": "7M€",
+    "label_right_up": "KUMULATIIVINEN TULOS (3kk)",
+    "value_right_up": "3%",
+    "label_left_down": "UUSIA PROJEKTEJA",
+    "value_left_down": "Yritys1\r\nYritys2\r\nMAHDOLLISIA:\r\nYritys3\r\nYritys4",
+    "label_right_down": "TYÖJONOSSA",
+    "label_right_down_1": "Roadmap",
+    "value_right_down_1": "5",
+    "label_right_down_2": "Neuvottelu",
+    "value_right_down_2": "3",
+    "update_info": "Päivitetty 28.1.2018"
+  }
+]

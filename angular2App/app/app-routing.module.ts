@@ -4,10 +4,10 @@ import { AdminComponent }   from './modules/admin/admin.component';
 import { InfoComponent }      from './modules/info/info.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/info', pathMatch: 'full' },
+  { path: '', redirectTo: '/info/0', pathMatch: 'full' },
   { path: 'admin',  component: AdminComponent },
-  { path: 'info', component: InfoComponent },
-  { path: 'info2', component: InfoComponent }
+  { path: 'info/0', component: InfoComponent },
+  { path: 'info/1', component: InfoComponent },
   
 ];
 
