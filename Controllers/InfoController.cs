@@ -40,15 +40,19 @@ namespace InfoScreen.Controllers
         public void Put(int id, [FromBody]Info value)
         {
             Info updateInfo = infos.Find(item => item.id == id);
-            updateInfo = value;
-            /*updateInfo.label_left_down = value.label_left_down;
+            //updateInfo = value;
+            updateInfo.label_left_down = value.label_left_down;
             updateInfo.label_left_up = value.label_left_up;
             updateInfo.label_right_down = value.label_right_down;
             updateInfo.label_right_down_1 = value.label_right_down_1;
             updateInfo.label_right_down_2 = value.label_right_down_2;
             updateInfo.label_right_up = value.label_right_up;
-            updateInfo.value_left_down = value.value_left_down;*/
-
+            updateInfo.value_left_down = value.value_left_down;
+            updateInfo.value_left_up = value.value_left_up;
+            updateInfo.value_right_down_1 = value.value_right_down_1;
+            updateInfo.value_right_down_2 = value.value_right_down_2;
+            updateInfo.value_right_up = value.value_right_up;
+            updateInfo.update_info = value.update_info;
             SaveToFIle(infos);
         }
         // POST api/values

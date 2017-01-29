@@ -19,7 +19,7 @@ export class InfoComponent implements OnInit {
     notFirstTime: boolean = false;
     ngOnInit(): void 
     {
-        this.st.newTimer('5sec', 5);
+        this.st.newTimer('5sec', 10);
         this.timerId = this.st.subscribe('5sec', e => this.callback());
 
         this.getInfo();

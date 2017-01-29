@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router }   from '@angular/router';
 
 import { Info } from '../../models/info';
 import { InfoService } from '../../services/info.service';
@@ -20,15 +21,21 @@ export class AdminComponent implements OnInit {
     info = new Info();
     
     constructor(
-        private heroService: InfoService,
-        private st: SimpleTimer) { }
+        private infoService: InfoService,
+        private st: SimpleTimer,
+        private router: Router,
+        private route: ActivatedRoute) { }
 
     ngOnInit(): void {
         this.st.delTimer('5sec');
-        this.heroService.getInfo(0)
-            .then(info => this.info = info);
+        this.getInfo();
+    }
+    getInfo(): void {
+        this.route.params
+            .switchMap((params: Params) => this.infoService.getInfo(+params['id']))
+            .subscribe(info => this.info = info);
     }
     save(): void {
-        this.heroService.update(this.info);
+        this.infoService.update(this.info);
     }
 }

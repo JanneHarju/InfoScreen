@@ -1,7 +1,10 @@
+<ul class="nav nav-tabs">
+  <li><a routerLink="/admin/0" routerLinkActive="active">Info 1</a></li>
+  <li><a routerLink="/admin/1" routerLinkActive="active">Info 2</a></li>
+</ul>
 <div id="admin-container">
     <div class="lw-bar">
-        ADMIN
-        <img src="assets/leanware.png" height="100%" align="right">
+        <img src="assets/leanware.png" height="100%" align="right"/>
     </div>
     <div class="col-xs-12 admin-content">
         <form>
@@ -15,7 +18,7 @@
                 <div class="form-group row">
                     <label class="col-xs-12 col-sm-3 form-control-label">Numero:</label>
                     <div class="col-xs-8 col-sm-4">
-                        <input type="number" class="form-control" [(ngModel)]="info.value_left_up" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                        <input type="text" class="form-control" [(ngModel)]="info.value_left_up" placeholder="0" [ngModelOptions]="{standalone: true}"/>
                     </div>
                 </div>
             </div>
@@ -29,7 +32,7 @@
                 <div class="form-group row">
                     <label class="col-xs-12 col-sm-3 form-control-label">Numero:</label>
                     <div class="col-xs-8 col-sm-4">
-                        <input type="number" class="form-control" [(ngModel)]="info.value_right_up" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                        <input type="text" class="form-control" [(ngModel)]="info.value_right_up" placeholder="0" [ngModelOptions]="{standalone: true}"/>
                     </div>
                 </div>
             </div>
@@ -44,7 +47,7 @@
                     <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
                     <div class="col-xs-12 col-sm-6">
                         <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
-						</textarea>
+                        </textarea>
                     </div>
                 </div>
             </div>
@@ -66,7 +69,7 @@
                 <div class="form-group row">
                     <label class="col-xs-12 col-sm-3 form-control-label">Alaotsikko 1 arvo:</label>
                     <div class="col-xs-8 col-sm-4">
-                        <input type="number" class="form-control" [(ngModel)]="info.value_right_down_1" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                        <input type="text" class="form-control" [(ngModel)]="info.value_right_down_1" placeholder="0" [ngModelOptions]="{standalone: true}"/>
                     </div>
                 </div>
             </div>

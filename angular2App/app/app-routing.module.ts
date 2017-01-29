@@ -5,7 +5,7 @@ import { InfoComponent }      from './modules/info/info.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/info/0', pathMatch: 'full' },
-  { path: 'admin',  component: AdminComponent },
+  { path: 'admin/:id',  component: AdminComponent },
   { path: 'info/0', component: InfoComponent },
   { path: 'info/1', component: InfoComponent },
   
