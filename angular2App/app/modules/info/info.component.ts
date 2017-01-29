@@ -4,7 +4,7 @@ import { Info } from '../../models/info';
 import { InfoService } from '../../services/info.service';
 import { routerTransition } from '../shared/router.animations';
 import { Location }                 from '@angular/common';
-import {SimpleTimer} from 'ng2-simple-timer';
+import { SimpleTimer } from 'ng2-simple-timer';
 
 @Component({
     selector: 'my-info',
@@ -30,13 +30,11 @@ export class InfoComponent implements OnInit {
         private router: Router,
         private st: SimpleTimer,
         private location: Location,
-        private route: ActivatedRoute,) { }
-    getInfo(): void {
-        
-        var urlParts = this.router.url.split("/");
-        var parameter = urlParts[urlParts.length-1];
+        private route: ActivatedRoute) { }
 
-        console.info(+parameter);
+    getInfo(): void {
+        let urlParts = this.router.url.split("/");
+        let parameter = urlParts[urlParts.length-1];
         this.infoService.getInfo(+parameter)
             .then(info => this.info = info);
     }
@@ -44,7 +42,7 @@ export class InfoComponent implements OnInit {
         if(this.notFirstTime)
         {
             this.st.delTimer('5sec');
-            if(this.location.isCurrentPathEqualTo("/info/1"))
+            if(this.location.isCurrentPathEqualTo('/info/1'))
             {
                 this.router.navigate(['/info', 0]);
             }
@@ -53,11 +51,11 @@ export class InfoComponent implements OnInit {
                 this.router.navigate(['/info', 1]);
             }
         }
-        else{
+        else
+        {
             this.notFirstTime = true;
         }
     }
-    
 }
 
 

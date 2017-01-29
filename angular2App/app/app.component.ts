@@ -8,11 +8,9 @@ import '../style/app.scss';
   templateUrl: 'app.component.html',
   styles: [ require('./app.component.scss'),require('./app.component.css') ],
 })
-export class AppComponent {
-  
+export class AppComponent 
+{
   title = 'Info-näyttö';
-  
-
 }
 
 
