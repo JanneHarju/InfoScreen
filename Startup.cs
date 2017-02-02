@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using InfoScreen.Controllers;
 
-namespace Angular2WebpackVisualStudio
+namespace InfoScreen
 {
     public class Startup
     {

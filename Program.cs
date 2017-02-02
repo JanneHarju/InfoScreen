@@ -4,7 +4,7 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 
-namespace Angular2WebpackVisualStudio
+namespace InfoScreen
 {
     public class Program
     {
