@@ -5,9 +5,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-//var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./webpack.helpers');
-var helpers2 = require('./helpers');
 
 console.log('@@@@@@@@@ USING DEVELOPMENT @@@@@@@@@@@@@@@');
 
@@ -32,7 +30,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.ts', '.js', '.json','less', '.css', '.scss', '.html']
+        extensions: ['.ts', '.js', '.json','.less', '.css', '.scss', '.html']
     },
 
     devServer: {

@@ -26,7 +26,7 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
+        extensions: ['.ts', '.js', '.json','.less', '.css', '.scss', '.html']
     },
 
     devServer: {
@@ -52,6 +52,10 @@ module.exports = {
                 test: /favicon.ico$/,
                 loader: 'file-loader?name=/[name].[ext]'
             },
+            { 
+                test: /.less$/, 
+                exclude: /node_modules/, 
+                loader: 'raw-loader!less-loader' },
             {
                 test: /\.css$/,
                 loader: 'to-string-loader!css-loader'
