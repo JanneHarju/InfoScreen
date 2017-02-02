@@ -1,0 +1,181 @@
+<ul class="nav nav-tabs">
+  <li><a routerLink="/admin/0" routerLinkActive="active">Info 1</a></li>
+  <li><a routerLink="/admin/1" routerLinkActive="active">Info 2</a></li>
+  <li><a routerLink="/calendaradmin/0" routerLinkActive="active">Calendar 1</a></li>
+  <li><a routerLink="/calendaradmin/1" routerLinkActive="active">Calendar 2</a></li>
+</ul>
+<div id="admin-container">
+    <div class="lw-bar">
+        <img src="assets/leanware.png" height="100%" align="right"/>
+    </div>
+    <div class="col-xs-12 admin-content">
+        <form>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 1:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="info.label_left_up" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 2</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="info.label_right_up" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 3:</label>
+                    <div class="col-xs-10 col-sm-6 col-md-4">
+                        <input type="text" class="form-control" [(ngModel)]="info.label_left_down" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 4:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="info.label_right_down" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 5:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        <input type="text" class="form-control" [(ngModel)]="info.value_right_down_1" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 6:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        <input type="text" class="form-control" [(ngModel)]="info.value_right_down_2" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 1:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="info.label_left_up" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 2</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="info.label_right_up" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 3:</label>
+                    <div class="col-xs-10 col-sm-6 col-md-4">
+                        <input type="text" class="form-control" [(ngModel)]="info.label_left_down" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 4:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="text" class="form-control" [(ngModel)]="info.label_right_down" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 5:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        <input type="text" class="form-control" [(ngModel)]="info.value_right_down_1" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Otsikko yläruutu 6:</label>
+                    <div class="col-xs-8 col-sm-4">
+                        <input type="text" class="form-control" [(ngModel)]="info.value_right_down_2" placeholder="0" [ngModelOptions]="{standalone: true}"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-xs-12 col-sm-3 form-control-label">Teksti:</label>
+                    <div class="col-xs-12 col-sm-6">
+                        <textarea rows="6" class="form-control" [(ngModel)]="info.value_left_down" placeholder="0" [ngModelOptions]="{standalone: true}">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-xs-12">
+                    <button (click)="save()" class="btn btn-warning">Tallenna</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</div>

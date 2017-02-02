@@ -11,6 +11,7 @@ import { InfoComponent }     from './modules/info/info.component';
 import { CalendarInfoComponent }     from './modules/calendarinfo/calendarinfo.component';
 import { InfoService }         from './services/info.service';
 import { AdminComponent } from './modules/admin/admin.component';
+import { CalendarAdminComponent } from './modules/calendaradmin/calendaradmin.component';
 import { NavMenuComponent } from './modules/shared/navmenu/navmenu.component'
 import { AppComponent }  from './app.component';
 import { SimpleTimer } from 'ng2-simple-timer';
@@ -29,6 +30,7 @@ import './rxjs-extensions';
     InfoComponent,
     CalendarInfoComponent,
     AdminComponent,
+    CalendarAdminComponent,
     NavMenuComponent,
   ],
   providers: [
