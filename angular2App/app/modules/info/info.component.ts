@@ -47,13 +47,13 @@ export class InfoComponent implements OnInit, OnDestroy {
         if(this.notFirstTime)
         {
             this.st.delTimer('5sec');
-            if(this.location.isCurrentPathEqualTo('/info/1'))
-            {
-                this.router.navigate(['/info', 0]);
-            }
-            else
+            if(this.location.isCurrentPathEqualTo('/info/0'))
             {
                 this.router.navigate(['/info', 1]);
+            }
+            else if(this.location.isCurrentPathEqualTo('/info/1'))
+            {
+                this.router.navigate(['/calendarinfo', 0]);
             }
         }
         else

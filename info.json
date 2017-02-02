@@ -1,12 +1,12 @@
 [
   {
     "id": 0,
-    "label_left_up": "LIIKEREITÄ TÄLLÄ HETKELLÄ",
+    "label_left_up": "Tammikuu",
     "value_left_up": "99",
-    "label_right_up": "REKRYTOINTEJA VUODEN ALUSTA",
+    "label_right_up": "Helmikuu",
     "value_right_up": "8",
     "label_left_down": "AVOIMIA PAIKKOJA",
-    "value_left_down": "Paikka\r\nPaikka2\r\nTULOSSA:\r\nPaikka3\r\nPaikka4",
+    "value_left_down": "Paikka ihan tosi\nPaikka2\nTULOSSA:\nPaikka4\nJoojoo\nAijaaniinpitkä\n",
     "label_right_down": "TYÖJONOSSA",
     "label_right_down_1": "Puh. haastattelu",
     "value_right_down_1": "15",

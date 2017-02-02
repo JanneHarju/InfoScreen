@@ -8,6 +8,7 @@ import { Configuration } from './app.constants';
 import { AppRoutingModule } from './app-routing.module';
 
 import { InfoComponent }     from './modules/info/info.component';
+import { CalendarInfoComponent }     from './modules/calendarinfo/calendarinfo.component';
 import { InfoService }         from './services/info.service';
 import { AdminComponent } from './modules/admin/admin.component';
 import { NavMenuComponent } from './modules/shared/navmenu/navmenu.component'
@@ -26,6 +27,7 @@ import './rxjs-extensions';
   declarations: [
     AppComponent,
     InfoComponent,
+    CalendarInfoComponent,
     AdminComponent,
     NavMenuComponent,
   ],
