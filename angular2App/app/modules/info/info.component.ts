@@ -5,15 +5,17 @@ import { InfoService } from '../../services/info.service';
 import { routerTransition } from '../shared/router.animations';
 import { Location }                 from '@angular/common';
 import { SimpleTimer } from 'ng2-simple-timer';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'my-info',
     templateUrl: 'info.component.html',
     styles: [ require('./info.component.less') ],
     animations: [routerTransition()],
-    host: {'[@routerTransition]': ''}
+    host: {'[@routerTransition]': ''},
 })
 export class InfoComponent implements OnInit, OnDestroy {
+    viewList: boolean = false;
     timerId: string;
     info = new Info();
     notFirstTime: boolean = false;
@@ -42,6 +44,7 @@ export class InfoComponent implements OnInit, OnDestroy {
         let parameter = urlParts[urlParts.length-1];
         this.infoService.getInfo(+parameter)
             .then(info => this.info = info);
+        this.viewList = this.info.label_right_down_2 == "";
     }
     callback() {
         if(this.notFirstTime)
