@@ -11,8 +11,8 @@ import { SimpleTimer } from 'ng2-simple-timer';
   selector: 'my-calendaradmin',
   templateUrl: 'calendaradmin.component.html',
   styles: [ require('./calendaradmin.component.less') ],
-    animations: [routerTransition()],
-    host: {'[@routerTransition]': ''}
+   // animations: [routerTransition()],
+   // host: {'[@routerTransition]': ''}
 })
 
 export class CalendarAdminComponent implements OnInit {
@@ -30,8 +30,10 @@ export class CalendarAdminComponent implements OnInit {
         this.getInfo();
     }
     getInfo(): void {
+
+        let add = 2;
         this.route.params
-            .switchMap((params: Params) => this.infoService.getInfo(+params['id']))
+            .switchMap((params: Params) => this.infoService.getInfo(+params['id']+add))
             .subscribe(info => this.info = info);
     }
     save(): void {

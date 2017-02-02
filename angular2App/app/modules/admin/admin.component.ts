@@ -11,8 +11,8 @@ import { SimpleTimer } from 'ng2-simple-timer';
   selector: 'my-admin',
   templateUrl: 'admin.component.html',
   styles: [ require('./admin.component.less') ],
-    animations: [routerTransition()],
-    host: {'[@routerTransition]': ''}
+  //  animations: [routerTransition()],
+   // host: {'[@routerTransition]': ''}
 })
 
 export class AdminComponent implements OnInit {

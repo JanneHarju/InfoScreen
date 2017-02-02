@@ -38,9 +38,11 @@ export class CalendarInfoComponent implements OnInit, OnDestroy {
         private route: ActivatedRoute) { }
 
     getInfo(): void {
+        let add = 2;
         let urlParts = this.router.url.split("/");
         let parameter = urlParts[urlParts.length-1];
-        this.infoService.getInfo(+parameter)
+        let id = +parameter + add;
+        this.infoService.getInfo(id)
             .then(info => this.info = info);
     }
     callback() {
