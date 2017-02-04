@@ -15,7 +15,7 @@ export class AuthService {
   login(password: string): Observable<boolean> {
     return Observable.of(true).delay(1000).do(val => 
     {
-        if(password == "hr")
+        if(password == "mellon")
         {
             this.isLoggedIn = true;
         }

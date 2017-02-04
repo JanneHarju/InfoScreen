@@ -2,17 +2,7 @@ import { Component }   from '@angular/core';
 import { Router }      from '@angular/router';
 import { AuthService } from './auth.service';
 @Component({
-  template: `
-    <h2>LOGIN</h2>
-    <p>{{message}}</p>
-    <label class="col-xs-12 col-sm-3 form-control-label">Salasana:</label>
-    <div class="col-xs-12 col-sm-6">
-        <input type="text" class="form-control" [(ngModel)]="password" placeholder="0" [ngModelOptions]="{standalone: true}"/>
-    </div>
-    <p>
-      <button (click)="login()" class="btn btn-success" *ngIf="!authService.isLoggedIn">Login</button>
-      <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
-    </p>`,
+    templateUrl: 'login.component.html',
     styles:[require('./login.component.css')],
 })
 export class LoginComponent {
