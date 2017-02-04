@@ -37,6 +37,9 @@ export class CalendarAdminComponent implements OnInit {
             .subscribe(info => this.info = info);
     }
     save(): void {
-        this.infoService.update(this.info);
+        this.infoService.update(this.info).then(()=>
+        {
+            this.router.navigate([{ outlets: { popup: 'popup' }}]);
+        });
     }
 }

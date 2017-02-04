@@ -15,6 +15,9 @@ import { NavMenuComponent } from './modules/shared/navmenu/navmenu.component'
 import { AppComponent }  from './app.component';
 import { SimpleTimer } from 'ng2-simple-timer';
 import { PopupComponent} from './modules/shared/popup/popup.component';
+import { LoginComponent } from './login.component';
+import { AuthGuard }            from './auth-guard.service';
+import { AuthService }          from './auth.service';
 
 import './rxjs-extensions';
 
@@ -33,10 +36,13 @@ import './rxjs-extensions';
     CalendarAdminComponent,
     NavMenuComponent,
     PopupComponent,
+    LoginComponent,
   ],
   providers: [
     InfoService,
     SimpleTimer,
+    AuthGuard,
+    AuthService,
   ],
   bootstrap: [ AppComponent ]
 })
