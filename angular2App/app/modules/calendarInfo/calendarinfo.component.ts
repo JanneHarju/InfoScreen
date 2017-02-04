@@ -51,10 +51,6 @@ export class CalendarInfoComponent implements OnInit, OnDestroy {
             this.st.delTimer('5sec');
             if(this.location.isCurrentPathEqualTo('/calendarinfo/0'))
             {
-                this.router.navigate(['/calendarinfo', 1]);
-            }
-            else if(this.location.isCurrentPathEqualTo('/calendarinfo/1'))
-            {
                 this.router.navigate(['/info', 0]);
             }
         }

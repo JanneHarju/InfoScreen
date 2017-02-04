@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
     host: {'[@routerTransition]': ''},
 })
 export class InfoComponent implements OnInit, OnDestroy {
-    viewList: boolean = false;
+    //viewList: boolean = false;
     timerId: string;
     info = new Info();
     notFirstTime: boolean = false;
@@ -44,7 +44,7 @@ export class InfoComponent implements OnInit, OnDestroy {
         let parameter = urlParts[urlParts.length-1];
         this.infoService.getInfo(+parameter)
             .then(info => this.info = info);
-        this.viewList = this.info.label_right_down_2 == "";
+        //this.viewList = this.info.label_right_down_2 == "";
     }
     callback() {
         if(this.notFirstTime)
