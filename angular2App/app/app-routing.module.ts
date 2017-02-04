@@ -4,6 +4,7 @@ import { AdminComponent }   from './modules/admin/admin.component';
 import { InfoComponent }      from './modules/info/info.component';
 import { CalendarInfoComponent }     from './modules/calendarinfo/calendarinfo.component';
 import { CalendarAdminComponent } from './modules/calendaradmin/calendaradmin.component';
+import { PopupComponent} from './modules/shared/popup/popup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/info/0', pathMatch: 'full' },
@@ -13,7 +14,7 @@ const routes: Routes = [
   { path: 'info/1', component: InfoComponent },
   { path: 'calendarinfo/0', component: CalendarInfoComponent },
   { path: 'calendarinfo/1', component: CalendarInfoComponent },
-  
+  { path: 'popup', component: PopupComponent, outlet: 'popup' },
 ];
 
 @NgModule({
