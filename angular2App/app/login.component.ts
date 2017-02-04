@@ -10,7 +10,7 @@ import { AuthService } from './auth.service';
         <input type="text" class="form-control" [(ngModel)]="password" placeholder="0" [ngModelOptions]="{standalone: true}"/>
     </div>
     <p>
-      <button (click)="login()"  *ngIf="!authService.isLoggedIn">Login</button>
+      <button (click)="login()" class="btn btn-success" *ngIf="!authService.isLoggedIn">Login</button>
       <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
     </p>`,
     styles:[require('./login.component.css')],

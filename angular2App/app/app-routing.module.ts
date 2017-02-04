@@ -11,7 +11,7 @@ import { LoginComponent } from './login.component';
 const routes: Routes = [
   { path: '', redirectTo: '/info/0', pathMatch: 'full' },
   { path: 'admin/:id',  component: AdminComponent, canActivate: [AuthGuard], },
-  { path: 'calendaradmin/:id',  component: CalendarAdminComponent },
+  { path: 'calendaradmin/:id',  component: CalendarAdminComponent, canActivate: [AuthGuard], },
   { path: 'info/0', component: InfoComponent },
   { path: 'info/1', component: InfoComponent },
   { path: 'calendarinfo/0', component: CalendarInfoComponent },
