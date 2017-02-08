@@ -18,7 +18,7 @@ import { PopupComponent} from './modules/shared/popup/popup.component';
 import { LoginComponent } from './login.component';
 import { AuthGuard }            from './auth-guard.service';
 import { AuthService }          from './auth.service';
-
+import { FocusDirective } from './focus.directive';
 import './rxjs-extensions';
 
 @NgModule({
@@ -37,6 +37,7 @@ import './rxjs-extensions';
     NavMenuComponent,
     PopupComponent,
     LoginComponent,
+    FocusDirective,
   ],
   providers: [
     InfoService,

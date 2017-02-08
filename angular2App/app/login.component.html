@@ -4,7 +4,7 @@
 <label class="col-xs-12 col-sm-3 form-control-label">Salasana:</label>
 <div class="col-xs-12 col-sm-6">
     <input type="text" class="form-control" [(ngModel)]="password" placeholder="0" 
-    [ngModelOptions]="{standalone: true}" (keyup.enter)="login()"/>
+    [ngModelOptions]="{standalone: true}" (keyup.enter)="login()" [myFocus]/>
 </div>
 <p>
     <button (click)="login()" class="btn btn-success" *ngIf="!authService.isLoggedIn">Login</button>
