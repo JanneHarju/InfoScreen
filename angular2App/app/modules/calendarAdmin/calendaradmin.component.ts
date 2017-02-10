@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Params, Router }   from '@angular/router';
 
 import { Info } from '../../models/info';
@@ -11,15 +11,14 @@ import { SimpleTimer } from 'ng2-simple-timer';
   selector: 'my-calendaradmin',
   templateUrl: 'calendaradmin.component.html',
   styles: [ require('./calendaradmin.component.less') ],
-   // animations: [routerTransition()],
-   // host: {'[@routerTransition]': ''}
 })
 
-export class CalendarAdminComponent implements OnInit {
+export class CalendarAdminComponent implements OnInit, AfterViewInit {
 
 
     info = new Info();
     
+    public focus = new EventEmitter<boolean>();
     constructor(
         private infoService: InfoService,
         private st: SimpleTimer,
@@ -28,6 +27,10 @@ export class CalendarAdminComponent implements OnInit {
 
     ngOnInit(): void {
         this.getInfo();
+    }
+    ngAfterViewInit()
+    {
+        this.focus.emit(true);
     }
     getInfo(): void {
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Params, Router }   from '@angular/router';
 
 import { Info } from '../../models/info';
@@ -15,11 +15,13 @@ import { SimpleTimer } from 'ng2-simple-timer';
    // host: {'[@routerTransition]': ''}
 })
 
-export class AdminComponent implements OnInit {
+export class AdminComponent implements OnInit, AfterViewInit {
 
 
     info = new Info();
     
+    public focus = new EventEmitter<boolean>();
+    public focus2 = new EventEmitter<boolean>();
     constructor(
         private infoService: InfoService,
         private st: SimpleTimer,
@@ -28,6 +30,10 @@ export class AdminComponent implements OnInit {
 
     ngOnInit(): void {
         this.getInfo();
+    }
+    ngAfterViewInit()
+    {
+        this.focus.emit(true);
     }
     getInfo(): void {
         this.route.params
