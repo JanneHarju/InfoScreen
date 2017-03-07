@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'info/0', component: InfoComponent },
   { path: 'info/1', component: InfoComponent },
   { path: 'calendarinfo/0', component: CalendarInfoComponent },
-  { path: 'calendarinfo/1', component: CalendarInfoComponent },
   { path: 'popup', component: PopupComponent, outlet: 'popup' },
   { path: 'login', component: LoginComponent },
 ];

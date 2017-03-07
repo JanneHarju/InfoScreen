@@ -16,7 +16,6 @@ module.exports = {
         hints: false
     },
     entry: {
-
         'polyfills': './angular2App/polyfills.ts',
         'vendor': './angular2App/vendor.ts',
         'app': './angular2App/main.ts'
@@ -36,7 +35,14 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         stats: 'minimal',
-        outputPath: path.join(__dirname, 'wwwroot/')
+        outputPath: path.join(__dirname, 'wwwroot/'),
+        hot: true,
+        proxy: {
+            '/api/infos/*': {
+            target: 'http://localhost:5000',
+            secure: false
+            }
+        }
     },
 
     module: {
@@ -93,6 +99,7 @@ module.exports = {
         exprContextCritical: false
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin({ name: ['app', 'vendor', 'polyfills']}),
         new webpack.ProvidePlugin({   
             jQuery: 'jquery',
@@ -100,12 +107,12 @@ module.exports = {
             jquery: 'jquery'
         }),
         //new ExtractTextPlugin('stylesheets/[name].less'),
-        new CleanWebpackPlugin(
+        /*new CleanWebpackPlugin(
             [
                 './wwwroot/dist',
                 './wwwroot/assets'
             ]
-        ),
+        ),*/
 
         new HtmlWebpackPlugin({
             filename: 'index.html',
@@ -119,4 +126,3 @@ module.exports = {
     ]
 
 };
-
