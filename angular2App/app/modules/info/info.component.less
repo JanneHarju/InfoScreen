@@ -113,3 +113,23 @@ p.header-bottom-padding {
     right: 0px;
     bottom: 0px;
 }
+.clock {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.clockp {
+    
+    font-size: 115pt;
+    font-family: 'Digital', sans-serif;
+    margin: 0;
+    position: absolute;               /* 2 */
+    top: 50%;                         /* 3 */
+    transform: translate(0, -50%)
+}
+@font-face {
+    font-family: 'Digital';
+    src: url('assets/7segment.woff')  format('woff');
+}

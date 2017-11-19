@@ -11,6 +11,9 @@ import '../style/app.scss';
 export class AppComponent 
 {
   title = 'Info-näyttö';
+  constructor() {
+    document.body.style.overflow = 'hidden';
+  }
 }
 
 

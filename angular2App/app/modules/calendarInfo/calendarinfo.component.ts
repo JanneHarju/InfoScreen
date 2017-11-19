@@ -19,15 +19,15 @@ export class CalendarInfoComponent implements OnInit, OnDestroy {
     notFirstTime: boolean = false;
     ngOnInit(): void 
     {
-        this.st.newTimer('5sec', 10);
-        this.timerId = this.st.subscribe('5sec', e => this.callback());
+        this.st.newTimer('timer', 20);
+        this.timerId = this.st.subscribe('timer', e => this.callback());
 
         this.getInfo();
     } 
 
     ngOnDestroy(): void
     {
-        this.st.delTimer('5sec');
+        this.st.delTimer('timer');
     }
 
     constructor(
@@ -48,7 +48,7 @@ export class CalendarInfoComponent implements OnInit, OnDestroy {
     callback() {
         if(this.notFirstTime)
         {
-            this.st.delTimer('5sec');
+            this.st.delTimer('timer');
             if(this.location.isCurrentPathEqualTo('/calendarinfo/0'))
             {
                 this.router.navigate(['/info', 0]);

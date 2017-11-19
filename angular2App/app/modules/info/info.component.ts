@@ -6,6 +6,7 @@ import { routerTransition } from '../shared/router.animations';
 import { Location }                 from '@angular/common';
 import { SimpleTimer } from 'ng2-simple-timer';
 import { CommonModule } from '@angular/common';
+import { DatePipe } from '@angular/common';
 
 @Component({
     selector: 'my-info',
@@ -18,18 +19,19 @@ export class InfoComponent implements OnInit, OnDestroy {
     //viewList: boolean = false;
     timerId: string;
     info = new Info();
+    time = new Date();
     notFirstTime: boolean = false;
     ngOnInit(): void 
     {
-        this.st.newTimer('5sec', 10);
-        this.timerId = this.st.subscribe('5sec', e => this.callback());
+        this.st.newTimer('timer', 20);
+        this.timerId = this.st.subscribe('timer', e => this.callback());
 
         this.getInfo();
     } 
 
     ngOnDestroy(): void
     {
-        this.st.delTimer('5sec');
+        this.st.delTimer('timer');
     }
 
     constructor(
@@ -49,7 +51,7 @@ export class InfoComponent implements OnInit, OnDestroy {
     callback() {
         if(this.notFirstTime)
         {
-            this.st.delTimer('5sec');
+            this.st.delTimer('timer');
             if(this.location.isCurrentPathEqualTo('/info/0'))
             {
                 this.router.navigate(['/info', 1]);
