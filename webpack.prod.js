@@ -19,7 +19,7 @@ module.exports = {
     },
 
     output: {
-        path: './wwwroot/',
+        path: __dirname +  '/wwwroot/',
         filename: 'dist/[name].[hash].bundle.js',
         chunkFilename: 'dist/[id].[hash].chunk.js',
         publicPath: '/'
@@ -53,9 +53,10 @@ module.exports = {
                 loader: 'file-loader?name=/[name].[ext]'
             },
             { 
-                test: /.less$/, 
-                exclude: /node_modules/, 
-                loader: 'raw-loader!less-loader' },
+                test: /\.less$/,
+                loader: ["raw-loader","css-loader", "less-loader",],
+                exclude: /node_modules/
+            },
             {
                 test: /\.css$/,
                 loader: 'to-string-loader!css-loader'

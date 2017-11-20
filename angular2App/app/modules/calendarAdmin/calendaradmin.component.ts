@@ -10,7 +10,7 @@ import { SimpleTimer } from 'ng2-simple-timer';
 @Component({
   selector: 'my-calendaradmin',
   templateUrl: 'calendaradmin.component.html',
-  styles: [ require('./calendaradmin.component.less') ],
+  styleUrls: [ './calendaradmin.component.less' ],
 })
 
 export class CalendarAdminComponent implements OnInit, AfterViewInit {

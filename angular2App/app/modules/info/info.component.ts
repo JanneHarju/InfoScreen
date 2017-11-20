@@ -7,12 +7,34 @@ import { Location }                 from '@angular/common';
 import { SimpleTimer } from 'ng2-simple-timer';
 import { CommonModule } from '@angular/common';
 import { DatePipe } from '@angular/common';
+import {trigger, state, animate, style, transition} from '@angular/core';
 
 @Component({
     selector: 'my-info',
     templateUrl: 'info.component.html',
-    styles: [ require('./info.component.less') ],
-    animations: [routerTransition()],
+    //styles: [require('./info.component.less')],
+    styleUrls: [ './info.component.less' ],
+    animations: [
+        trigger('routerTransition', [
+        state('void', style({ 
+                backgroundColor:'black', 
+                position:'absolute',
+                 width:'100%'
+            }) ),
+        state('*', style({
+                backgroundColor:'black', 
+                position:'absolute', 
+                width:'100%'
+            }) ),
+        transition(':enter', [  // before 2.1: transition('void => *', [
+          style({transform: 'translateX(100%)'}),
+          animate('0.5s ease-in-out', style({transform: 'translateX(0%)'}))
+        ]),
+        transition(':leave', [  // before 2.1: transition('* => void', [
+          style({transform: 'translateX(0%)'}),
+          animate('0.5s ease-in-out', style({transform: 'translateX(-100%)'}))
+        ])
+      ])],
     host: {'[@routerTransition]': ''},
 })
 export class InfoComponent implements OnInit, OnDestroy {

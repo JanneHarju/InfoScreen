@@ -10,7 +10,7 @@ import { SimpleTimer } from 'ng2-simple-timer';
 @Component({
   selector: 'my-admin',
   templateUrl: 'admin.component.html',
-  styles: [ require('./admin.component.less') ],
+  styleUrls: [ './admin.component.less' ],
   //  animations: [routerTransition()],
    // host: {'[@routerTransition]': ''}
 })
